@@ -7,11 +7,13 @@
 <script lang="ts">
 import Vue from 'vue'
 import VKbarProvider from '@/components/VKbarProvider.vue'
+import { mdiClipboard } from '@mdi/js'
 
 const actions = [
   {
     id: 'blog',
     name: 'Blog',
+    icon: mdiClipboard,
     description: '',
     shortcut: ['b'],
     keywords: 'writing words',
