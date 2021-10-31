@@ -1,6 +1,6 @@
 <template>
   <v-app id="app">
-    <VKbarProvider />
+    <VKbarProvider :actions="actions" />
   </v-app>
 </template>
 
@@ -8,21 +8,31 @@
 import Vue from 'vue'
 import VKbarProvider from '@/components/VKbarProvider.vue'
 
+const actions = [
+  {
+    id: 'blog',
+    name: 'Blog',
+    description: '',
+    shortcut: ['b'],
+    keywords: 'writing words',
+    perform: () => (window.location.pathname = 'blog')
+  },
+  {
+    id: 'contact',
+    name: 'Contact',
+    shortcut: ['c'],
+    keywords: 'email',
+    perform: () => (window.location.pathname = 'contact')
+  }
+]
+
 export default Vue.extend({
   name: 'App',
   components: {
     VKbarProvider
-  }
+  },
+  data: () => ({
+    actions: actions
+  })
 })
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
