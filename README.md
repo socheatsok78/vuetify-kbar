@@ -1,6 +1,61 @@
 # vuetify-kbar
 
-## Project setup
+## Guide
+
+**Install**
+
+```sh
+$ npm install vuetify-kbar
+# or
+$ yarn add vuetify-kbar
+```
+
+**Usage**
+
+```vue
+<template>
+  <v-app id="app">
+    <v-kbar-provider :actions="actions" />
+  </v-app>
+</template>
+
+<script>
+import { mdiClipboard } from '@mdi/js'
+
+const actions = [
+  {
+    id: 'blog',
+    name: 'Blog',
+    icon: mdiClipboard,
+    description: '',
+    shortcut: ['b'],
+    keywords: 'writing words',
+    perform: () => (window.location.pathname = 'blog')
+  },
+  {
+    id: 'contact',
+    name: 'Contact',
+    shortcut: ['c'],
+    keywords: 'email',
+    perform: () => (window.location.pathname = 'contact')
+  }
+]
+
+export default {
+  name: 'App',
+  data: () => ({
+    actions: actions
+  })
+}
+</script>
+
+```
+
+## Development
+
+This project was created using `@vue/cli` service.
+
+### Project setup
 ```
 yarn install
 ```
