@@ -5,6 +5,14 @@
   "unpkg": "dist/vuetify-kbar.umd.js",
   "jsdelivr": "dist/vuetify-kbar.umd.js",
   "typings": "types/index.ts",
+  "files": [
+    "dist",
+    "types"
+  ],
+  "directories": {
+    "lib": "dist",
+    "types": "types"
+  },
   "scripts": {
     "serve": "vue-cli-service serve example/main.ts",
     "build": "vue-cli-service build --target lib src/main.ts",
@@ -43,6 +51,10 @@
     "vue-cli-plugin-vuetify": "~2.4.3",
     "vue-template-compiler": "^2.6.11",
     "vuetify-loader": "^1.7.0"
+  },
+  "peerDependencies": {
+    "vue": ">= 2.0.0 < 3",
+    "vuetify": ">= 2.4.0 < 2.6"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
