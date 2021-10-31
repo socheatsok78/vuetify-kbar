@@ -4,6 +4,7 @@
   "main": "dist/vuetify-kbar.umd.js",
   "unpkg": "dist/vuetify-kbar.umd.js",
   "jsdelivr": "dist/vuetify-kbar.umd.js",
+  "typings": "types/index.ts",
   "scripts": {
     "serve": "vue-cli-service serve example/main.ts",
     "build": "vue-cli-service build --target lib src/main.ts",
