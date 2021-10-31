@@ -51,6 +51,7 @@
     ]
   },
   "publishConfig": {
-    "tag": "next"
+    "tag": "next",
+    "registry": "https://npm.pkg.github.com"
   }
 }
