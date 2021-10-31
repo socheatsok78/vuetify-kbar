@@ -5,9 +5,9 @@
 **Install**
 
 ```sh
-$ npm install vuetify-kbar
+$ npm install @socheatsok78/vuetify-kbar
 # or
-$ yarn add vuetify-kbar
+$ yarn add @socheatsok78/vuetify-kbar
 ```
 
 **Usage**
