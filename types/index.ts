@@ -1,5 +1,7 @@
 import { VueConstructor } from 'vue'
 
+export const VKbarProvider = {} as VueConstructor
+
 export interface KBarAction {
   id: string
   name: string
@@ -9,5 +11,3 @@ export interface KBarAction {
   keywords?: string
   perform: () => void
 }
-
-export type VKbarProvider = VueConstructor
