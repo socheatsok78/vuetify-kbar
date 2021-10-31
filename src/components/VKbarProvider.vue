@@ -24,8 +24,10 @@
         <div :key="i">
           <!-- <v-subheader>User Controls</v-subheader> -->
           <v-list-item @click="() => item.perform()">
+              <v-list-item-icon v-if="item.icon">
+                <v-icon>{{ item.icon }}</v-icon>
+              </v-list-item-icon>
             <v-list-item-content>
-              <!-- <v-list-item-icon></v-list-item-icon> -->
               <v-list-item-title>{{ item.name }}</v-list-item-title>
               <v-list-item-subtitle v-if="item.description">{{ item.description }}</v-list-item-subtitle>
             </v-list-item-content>
