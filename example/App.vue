@@ -7,9 +7,10 @@
 <script lang="ts">
 import Vue from 'vue'
 import VKbarProvider from '@/components/VKbarProvider.vue'
+import { KBarAction } from '@/interfaces'
 import { mdiClipboard } from '@mdi/js'
 
-const actions = [
+const actions: KBarAction[] = [
   {
     id: 'blog',
     name: 'Blog',
