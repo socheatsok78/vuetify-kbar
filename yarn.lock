@@ -919,6 +919,11 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
+"@github/hotkey@^1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@github/hotkey/-/hotkey-1.6.0.tgz#64da82a18ac11d24f9d5d61575a0a58ba101b2ab"
+  integrity sha512-pm/xBWrn0yyD2GFqPUBH4ne7mdpdrnmdHxwKV0hN/jnSKj01RTPxau65SAvBvWD1Pf2VRv/OEE4H9ECORBHGdg==
+
 "@hapi/address@2.x.x":
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/@hapi/address/-/address-2.1.4.tgz#5d67ed43f3fd41a69d4b9ff7b56e7c0d1d0a81e5"
