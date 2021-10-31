@@ -1,6 +1,6 @@
 {
   "name": "@socheatsok78/vuetify-kbar",
-  "version": "0.1.0",
+  "version": "0.1.0-next.1",
   "scripts": {
     "serve": "vue-cli-service serve example/main.ts",
     "build": "vue-cli-service build --target lib src/main.ts",
