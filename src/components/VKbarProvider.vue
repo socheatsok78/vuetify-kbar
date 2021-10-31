@@ -49,24 +49,16 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import Vue from 'vue'
 import { install } from '@github/hotkey'
-
-interface Action {
-  id: string
-  name: string
-  description?: string
-  shortcut?: string[]
-  keywords?: string[]
-  perform: () => void
-}
+import { KBarAction } from '@/interfaces'
 
 type Data = {
   show: boolean
   search: string
-  actionItems: Action[]
+  actionItems: KBarAction[]
 }
 
 type Props = {
-  actions: Action[]
+  actions: KBarAction[]
 }
 
 type Computed = {
