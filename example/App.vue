@@ -8,13 +8,13 @@
 import Vue from 'vue'
 import VKbarProvider from '@/components/VKbarProvider.vue'
 import { KBarAction } from '@/interfaces'
-import { mdiClipboard } from '@mdi/js'
+// import { mdiClipboard } from '@mdi/js'
 
 const actions: KBarAction[] = [
   {
     id: 'blog',
     name: 'Blog',
-    icon: mdiClipboard,
+    // icon: mdiClipboard,
     description: '',
     shortcut: ['b'],
     keywords: 'writing words',
