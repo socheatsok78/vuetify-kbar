@@ -23,7 +23,7 @@
       <template v-for="(item, i) in actionItems">
         <div :key="i">
           <!-- <v-subheader>User Controls</v-subheader> -->
-          <v-list-item @click="() => item.perform()">
+          <v-list-item @click="() => handlePerformAction(item)">
               <v-list-item-icon v-if="item.icon">
                 <v-icon>{{ item.icon }}</v-icon>
               </v-list-item-icon>
@@ -33,7 +33,7 @@
             </v-list-item-content>
             <v-list-item-icon>
               <template v-for="(shortcut, j) in item.shortcut">
-                <kbd :key="j">{{ shortcut }}</kbd>
+                <kbd :key="j" class="mx-1">{{ shortcut }}</kbd>
               </template>
             </v-list-item-icon>
           </v-list-item>
@@ -68,6 +68,8 @@ type Computed = {
 type Methods = {
   onSearch: (search: string) => void,
   onToggle: () => void
+  closeKbar: () => void
+  handlePerformAction: (action: KBarAction) => void
 }
 
 export default Vue.extend<Data, Methods, Computed, Props>({
@@ -102,6 +104,9 @@ export default Vue.extend<Data, Methods, Computed, Props>({
     }
   },
   methods: {
+    closeKbar () {
+      this.show = false
+    },
     onToggle () {
       this.show = !this.show
     },
@@ -120,6 +125,10 @@ export default Vue.extend<Data, Methods, Computed, Props>({
           return item
         }
       })
+    },
+    handlePerformAction (action: KBarAction) {
+      this.closeKbar()
+      action.perform()
     }
   }
 })
