@@ -1,6 +1,8 @@
-# vuetify-kbar
+# Vuetify `kBar`
 
-A simple plug-n-play cmd+k interface for Vuetify
+A simple plug-n-play <kbd>cmd</kbd>+<kbd>k</kbd> interface for [Vuetify](http://vuetifyjs.com/).
+
+[Live demo](https://socheat.dev/vuetify-kbar/)
 
 > :warning::warning: This project is currently is in work-in-progress stage.
 
