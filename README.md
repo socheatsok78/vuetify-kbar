@@ -23,7 +23,7 @@ $ yarn add @socheatsok78/vuetify-kbar@next
 ```vue
 <template>
   <v-app id="app">
-    <v-kbar-provider :actions="actions" />
+    <v-kbar :actions="actions" />
   </v-app>
 </template>
 
@@ -34,7 +34,6 @@ const actions = [
   {
     id: 'blog',
     name: 'Blog',
-    icon: mdiClipboard,
     description: '',
     shortcut: ['b'],
     keywords: 'writing words',
@@ -51,6 +50,9 @@ const actions = [
 
 export default {
   name: 'App',
+  components: {
+    VKbar
+  },
   data: () => ({
     actions: actions
   })
