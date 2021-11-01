@@ -1,6 +1,6 @@
 {
   "name": "@socheatsok78/vuetify-kbar",
-  "version": "0.1.0-next.4",
+  "version": "0.1.0-next.5",
   "main": "dist/vuetify-kbar.umd.js",
   "unpkg": "dist/vuetify-kbar.umd.js",
   "jsdelivr": "dist/vuetify-kbar.umd.js",
