@@ -23,7 +23,7 @@
       <template v-for="(item, i) in actionItems">
         <div :key="i">
           <!-- <v-subheader>User Controls</v-subheader> -->
-          <v-list-item @click="() => handlePerformAction(item)">
+          <v-list-item @click="() => handlePerformAction(item)" dense>
               <v-list-item-icon v-if="item.icon">
                 <v-icon>{{ item.icon }}</v-icon>
               </v-list-item-icon>
@@ -123,6 +123,8 @@ export default Vue.extend<Data, Methods, Computed, Props>({
           return item
         } else if (item.keywords?.includes(search)) {
           return item
+        } else if (matchesShortcut(item.shortcut || [], search.split(''))) {
+          return item
         }
       })
     },
@@ -132,6 +134,10 @@ export default Vue.extend<Data, Methods, Computed, Props>({
     }
   }
 })
+
+const matchesShortcut = (shortcut: string[], search: string[]) => {
+  return shortcut.every((cur, i) => cur === search[i])
+}
 </script>
 
 <style scoped>
