@@ -24,7 +24,7 @@
     "@github/hotkey": "^1.6.0",
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
-    "vuetify": "^2.4.0"
+    "vuetify": "^2.5.9"
   },
   "devDependencies": {
     "@mdi/js": "^6.4.95",
