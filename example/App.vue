@@ -1,22 +1,26 @@
 <template>
   <v-app id="app">
-    <UsageGuide />
-    <VKbarExample />
+    <v-container>
+      <WelcomeBanner />
+      <VKbarExample />
+      <UsageGuide />
+    </v-container>
   </v-app>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 
-import UsageGuide from './components/UsageGuide.vue'
+import WelcomeBanner from './components/WelcomeBanner.vue'
 import VKbarExample from './components/VKbarExample.vue'
+import UsageGuide from './components/UsageGuide.vue'
 
 export default Vue.extend({
   name: 'App',
   components: {
-    UsageGuide,
-    VKbarExample
+    WelcomeBanner,
+    VKbarExample,
+    UsageGuide
   }
-
 })
 </script>
