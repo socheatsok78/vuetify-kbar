@@ -2,7 +2,7 @@
 
 A simple plug-n-play cmd+k interface for Vuetify
 
-> :warning::warning: This proejct is currently is in work-in-progress stage.
+> :warning::warning: This project is currently is in work-in-progress stage.
 
 ![Screen Shot 2021-10-31 at 8 27 36 PM](https://user-images.githubusercontent.com/4363857/139585888-5a2c6e9d-a57d-49fb-8421-b730ad1157ef.png)
 
