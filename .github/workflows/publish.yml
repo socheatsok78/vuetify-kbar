@@ -26,6 +26,8 @@ jobs:
       run: |
         npm i -g zx
         zx .github/scripts/npm-dist-tag.mjs
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
     # Publish to GitHub Packages
     - uses: actions/setup-node@v1
