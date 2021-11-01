@@ -1,5 +1,5 @@
 export interface KBarAction {
-  id: string
+  id?: string
   name: string
   icon?: unknown,
   description?: string

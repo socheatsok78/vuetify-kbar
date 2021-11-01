@@ -6,7 +6,7 @@ module.exports = {
   extends: [
     'plugin:vue/essential',
     '@vue/standard',
-    '@vue/typescript/recommended'
+    '@vue/typescript'
   ],
   parserOptions: {
     ecmaVersion: 2020

@@ -1,17 +1,17 @@
 <template>
-  <VKbarProvider :actions="actions" />
+  <VKbar :actions="actions" />
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import VKbarProvider from '@/components/VKbarProvider.vue'
+import VKbar from '@/components/VKbar.vue'
 // import { KBarAction } from '@/interfaces'
 // import { mdiClipboard } from '@mdi/js'
 
 export default Vue.extend({
   name: 'VKbarExample',
   components: {
-    VKbarProvider
+    VKbar
   },
   computed: {
     actions () {
@@ -23,6 +23,7 @@ export default Vue.extend({
           description: '',
           shortcut: ['b'],
           keywords: 'writing words',
+          section: 'Navigations',
           perform: () => {
             alert('Navigate to Blog')
           }
@@ -32,6 +33,7 @@ export default Vue.extend({
           name: 'Contact',
           shortcut: ['c'],
           keywords: 'email',
+          section: 'Navigations',
           perform: () => {
             alert('Navigate to Contact')
           }
@@ -39,8 +41,9 @@ export default Vue.extend({
         {
           id: 'theme-light',
           name: 'Set light theme',
-          shortcut: ['t', 'h'],
+          shortcut: ['t', 'l'],
           keywords: 'light theme',
+          section: 'Preferences',
           perform: () => {
             this.$vuetify.theme.dark = false
           }
@@ -48,8 +51,9 @@ export default Vue.extend({
         {
           id: 'theme-dark',
           name: 'Set dark theme',
-          shortcut: ['t', 'h'],
+          shortcut: ['t', 'd'],
           keywords: 'dark theme',
+          section: 'Preferences',
           perform: () => {
             this.$vuetify.theme.dark = true
           }
