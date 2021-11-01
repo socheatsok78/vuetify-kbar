@@ -16,6 +16,7 @@
   "scripts": {
     "serve": "vue-cli-service serve example/main.ts",
     "build": "vue-cli-service build --target lib src/main.ts",
+    "build:example": "vue-cli-service build --dest docs example/main.ts",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
