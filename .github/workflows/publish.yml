@@ -20,6 +20,13 @@ jobs:
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
+    # npm-dist-tag
+    # https://docs.npmjs.com/cli/v7/commands/npm-dist-tag
+    - name: Ensure dist-tag published
+      run: |
+        npm i -g zx
+        zx .github/scripts/npm-dist-tag.mjs
+
     # Publish to GitHub Packages
     - uses: actions/setup-node@v1
       with:
@@ -29,10 +36,3 @@ jobs:
       run: yarn publish
       env:
         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-    # npm-dist-tag
-    # https://docs.npmjs.com/cli/v7/commands/npm-dist-tag
-    - name: Ensure dist-tag published
-      run: |
-        npm i -g zx
-        zx .github/scripts/npm-dist-tag.mjs
