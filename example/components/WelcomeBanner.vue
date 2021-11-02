@@ -6,7 +6,7 @@
       </span>
     </v-col>
     <v-col cols="12" class="text-center">
-      <span class="text-subtitle-1">
+      <span class="vkbar-example text-subtitle-1" @click="() => toggle()">
         <span class="px-2">Press</span>
         <kbd>Meta</kbd> + <kbd>K</kbd>
         <span class="px-2">or</span>
@@ -24,6 +24,9 @@
 export default {
   name: 'WelcomeBanner',
   methods: {
+    toggle () {
+      this.$root.$emit('toggle-vkbar')
+    },
     toDocs () {
       open('https://github.com/socheatsok78/vuetify-kbar#guide', '_blank')
     },
@@ -33,3 +36,10 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .vkbar-example {
+    cursor: pointer;
+    user-select: none;
+  }
+</style>

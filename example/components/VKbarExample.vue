@@ -1,5 +1,5 @@
 <template>
-  <VKbar :actions="actions" />
+  <VKbar ref="vkbar" :actions="actions" />
 </template>
 
 <script lang="ts">
@@ -12,6 +12,12 @@ export default Vue.extend({
   name: 'VKbarExample',
   components: {
     VKbar
+  },
+  mounted () {
+    this.$root.$on('toggle-vkbar', () => {
+      // @ts-ignore
+      this.$refs.vkbar.toggle()
+    })
   },
   computed: {
     actions () {
