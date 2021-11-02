@@ -1,6 +1,6 @@
 import { VueConstructor } from 'vue'
 
-export const VKbarProvider = {} as VueConstructor
+export const VKbar = {} as VueConstructor
 
 export interface KBarAction {
   id: string
