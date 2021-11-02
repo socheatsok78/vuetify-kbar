@@ -40,8 +40,8 @@ type Props = {
 type Computed = {}
 
 type Methods = {
-  onToggle: () => void
-  closeKbar: () => void
+  toggle: () => void
+  close: () => void
   clickOnResult: () => void
 }
 
@@ -60,7 +60,7 @@ export default Vue.extend<Data, Methods, Computed, Props>({
     search: '',
     hotkey: {
       hotkey: 'Control+k,Meta+k',
-      handler: 'onToggle'
+      handler: 'toggle'
     }
   }),
   directives: {
@@ -82,15 +82,14 @@ export default Vue.extend<Data, Methods, Computed, Props>({
     }
   },
   methods: {
-    closeKbar () {
+    close () {
       this.show = false
     },
-    onToggle () {
-      console.log('onToggle')
+    toggle () {
       this.show = !this.show
     },
     clickOnResult () {
-      this.closeKbar()
+      this.close()
     }
   }
 })
