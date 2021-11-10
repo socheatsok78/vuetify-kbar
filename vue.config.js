@@ -6,6 +6,19 @@ module.exports = {
   css: {
     extract: false
   },
+  configureWebpack: {
+    module: {
+      rules: [
+        {
+          enforce: 'pre',
+          test: /\.s[ac]ss$/,
+          include: /node_modules[/\\]vuetify[/\\]/,
+          issuer: /node_modules[/\\]vuetify[/\\]/,
+          loader: 'null-loader'
+        }
+      ]
+    }
+  },
   transpileDependencies: [
     // 'vuetify'
   ]
