@@ -5,6 +5,7 @@
     content-class="v-kbar"
     eager
     scrollable
+    :width="width"
     max-width="600px"
   >
     <v-kbar-content>
@@ -35,6 +36,7 @@ type Data = {
 
 type Props = {
   actions: KBarAction[]
+  width: string | number
 }
 
 type Computed = {}
@@ -53,7 +55,12 @@ export default Vue.extend<Data, Methods, Computed, Props>({
     VKbarResult
   },
   props: {
-    actions: {}
+    actions: {
+      type: Array
+    },
+    width: {
+      type: [String, Number]
+    }
   },
   data: () => ({
     show: false,
