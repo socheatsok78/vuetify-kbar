@@ -2,7 +2,7 @@
   <v-dialog
     v-model="show"
     v-hotkey="hotkey"
-    content-class="v-kbar-provider"
+    content-class="v-kbar"
     eager
     scrollable
     max-width="600px"
@@ -96,7 +96,7 @@ export default Vue.extend<Data, Methods, Computed, Props>({
 </script>
 
 <style scoped>
-  >>> .v-kbar-provider {
+  >>> .v-kbar {
     position: absolute;
     top: 20%;
   }
