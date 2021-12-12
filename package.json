@@ -58,7 +58,7 @@
   },
   "peerDependencies": {
     "vue": ">= 2.0.0 < 3",
-    "vuetify": ">= 2.4.0 < 2.6"
+    "vuetify": ">= 2.4.0 <= 2.6"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
