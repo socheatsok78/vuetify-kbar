@@ -17,10 +17,15 @@
 </template>
 
 <script>
+import { VListItem, VTextField } from 'vuetify/lib'
 import { VFocus } from '@/directives'
 
 export default {
   name: 'VKbarSearch',
+  components: {
+    VListItem,
+    VTextField
+  },
   props: {
     value: {}
   },

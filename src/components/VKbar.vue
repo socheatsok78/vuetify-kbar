@@ -25,6 +25,7 @@ import Vue from 'vue'
 import { VHotkey } from '@/directives'
 import { KBarAction } from '@/interfaces'
 
+import { VDialog } from 'vuetify/lib'
 import VKbarContent from './VKbarContent.vue'
 import VKbarSearch from './VKbarSearch.vue'
 import VKbarResult from './VKbarResult.vue'
@@ -50,6 +51,7 @@ type Methods = {
 export default Vue.extend<Data, Methods, Computed, Props>({
   name: 'VKbar',
   components: {
+    VDialog,
     VKbarContent,
     VKbarSearch,
     VKbarResult

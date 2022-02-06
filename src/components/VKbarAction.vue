@@ -17,6 +17,13 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import {
+  VListItem,
+  VListItemTitle,
+  VListItemSubtitle,
+  VListItemContent,
+  VListItemIcon
+} from 'vuetify/lib'
 import { VHotkey } from '@/directives'
 import { KBarAction } from '@/interfaces'
 
@@ -26,6 +33,13 @@ type Props = {
 
 export default Vue.extend<{}, {}, {}, Props>({
   name: 'VKbarAction',
+  components: {
+    VListItem,
+    VListItemTitle,
+    VListItemSubtitle,
+    VListItemContent,
+    VListItemIcon
+  },
   props: {
     item: {}
   },
