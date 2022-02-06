@@ -61,7 +61,8 @@ export default Vue.extend<Data, Methods, Computed, Props>({
       type: Array
     },
     width: {
-      type: [String, Number]
+      type: [String, Number],
+      default: () => 600
     }
   },
   data: () => ({
