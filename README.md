@@ -12,6 +12,9 @@ A simple plug-n-play <kbd>cmd</kbd>+<kbd>k</kbd> interface for [Vuetify](http://
 
 **Install**
 
+> Note: You'll need to bring your own `vuetify`.  
+> You can install `vuetify` via `npm install vuetify` or `yarn add vuetify`.
+
 ```sh
 $ npm install @socheatsok78/vuetify-kbar@next
 # or
